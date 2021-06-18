@@ -1,26 +1,21 @@
-﻿/* 
+/* 
 Plugin     : TextBox
 Purpose    : Multiline Input Box
-Version    : 1.0
+Version    : 1.1
+
+Syntax:
+[[TextBox=Text|numberOfLines|width]]
 
 History:
+- 1.1 numberOfLines can be skipped, defaults to 5 if not defined, example: ([[TextBox=Text||500]])
 - 1.0 first version
 */
 
 GetSnippetTextBox:
 MakeTextBox:
 
-If (CountString(PluginOptions, "|") > 1)
-	lineNum := StrSplit(PluginOptions,"|").2
-Else {
-    lineNum := 5
-}
-
-If (CountString(PluginOptions, "|") = 2)
-	widthNum := StrSplit(PluginOptions,"|").3
-Else {
-    widthNum := 300
-}
+linenum:=StrSplit(PluginOptions,"|").2 = "" ? 5 : StrSplit(PluginOptions,"|").2
+widthNum:=StrSplit(PluginOptions,"|").3 = "" ? 300 : StrSplit(PluginOptions,"|").3
 
 Gui, 10:Destroy
 Gui, 10:+Owner +AlwaysOnTop
@@ -47,6 +42,7 @@ MadeChoice=1
 
 
 StringReplace, clip, clip, %PluginText%, %MyTextBox%
+    linenum:="",widthNum:=""
     PluginText:=""
     PluginOptions:=""
     ChoiceQuestion:=""
