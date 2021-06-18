@@ -18,3 +18,9 @@ Refer to Lintalist's [HOW TO WRITE A PLUGIN FOR LINTALIST BUNDLES/SNIPPETS](http
 
 ## Quirks
 - While both `numberOfLines` and `width` are optional, you **must** set `numberOfLines` in order to set the width.
+- Unlike the Input plugin that continues by pressing Enter, due to the multi-line nature of TextBox you will need to click the Ok button (or press Tab and Enter).
+
+## Screenshots
+![image](https://user-images.githubusercontent.com/10510126/122600924-e567b800-d046-11eb-822a-39c5ddb2fec0.png)
+
+![image](https://user-images.githubusercontent.com/10510126/122600928-e698e500-d046-11eb-905a-4ce169432489.png)
