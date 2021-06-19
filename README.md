@@ -17,7 +17,7 @@ Refer to Lintalist's [HOW TO WRITE A PLUGIN FOR LINTALIST BUNDLES/SNIPPETS](http
 `width` is the width of the textbox. Defaults to 300
 
 ## Quirks
-- While both `numberOfLines` and `width` are optional, you **must** set `numberOfLines` in order to set the width.
+- `numberOfLines` and `width` are optional. `numberOfLines` can be empty to use the default value (5), example `[[TextBox=Text||500]]`
 - Unlike the Input plugin that continues by pressing Enter, due to the multi-line nature of TextBox you will need to click the Ok button (or press Tab and Enter).
 
 ## Screenshots
